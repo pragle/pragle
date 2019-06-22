@@ -1,0 +1,50 @@
+{
+  "name": "@pragle/pragle",
+  "version": "0.0.1",
+  "description": "Code generator",
+  "repository": "pragle/pragle",
+  "author": "Michal Szczepanski <michal@vane.pl>",
+  "license": "MIT",
+  "electronWebpack": {
+    "title": true
+  },
+  "_moduleAliases": {
+    "@plugins": "plugins/data"
+  },
+  "build": {
+    "appId": "com.pragle.pragle",
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://pragle.com"
+      }
+    ],
+    "files": [
+      "plugins/**/*"
+    ]
+  },
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "electron": "^5.0.4",
+    "electron-builder": "^20.43.0",
+    "electron-webpack": "^2.6.2",
+    "webpack": "^4.35.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.1.1",
+    "electron-updater": "^4.0.6",
+    "module-alias": "^2.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "uuid4": "^1.1.4"
+  }
+}

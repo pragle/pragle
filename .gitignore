@@ -1,0 +1,15 @@
+# JS
+node_modules
+yarn.lock
+yarn-error.log
+
+#IDE
+.idea
+*.iml
+
+# OS
+.DS_Store
+
+# APP
+plugins
+dist
