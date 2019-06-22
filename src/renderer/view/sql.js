@@ -34,12 +34,11 @@ export const ConnectDetailsView = ({location}) => {
     //console.log(dir);
     if(fs.existsSync(path)) {
       const data = fs.readFileSync(path);
-      return JSON.parse(data)
+      return JSON.parse(data);
     }
     return {title:`Database plugin : '${dbname}' not found`, options:[]};
   }
-  const {options, title} = componentWillMount();
-  const [data, setData] = React.useState({options, title});
+  const [data, setData] = React.useState(componentWillMount());
 
   const handleSaveClick = () => {};
   const handleConnectClick = () => {
@@ -62,7 +61,7 @@ export const ConnectDetailsView = ({location}) => {
     console.log(tables);
   };
   let buttonMenu;
-  if(options.length > 0) {
+  if(data.options.length > 0) {
     buttonMenu = (
       <div>
         <Button onClick={handleSaveClick}>Save</Button>
