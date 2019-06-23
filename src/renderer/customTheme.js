@@ -7,7 +7,7 @@ export const customTheme = createMuiTheme({
   palette: {
     common: {
       black: '#000',
-      white: '#000',
+      white: '#fff',
     },
     background: {
       default: '#000',
@@ -79,6 +79,16 @@ export const customTheme = createMuiTheme({
       root: {
         fill: '#00ff1f',
       },
+    },
+    MuiTypography: {
+      colorPrimary: {
+        color: '#fff',
+      }
+    },
+    MuiButton: {
+      containedPrimary: {
+        color: "#fff",
+      }
     }
   },
 });
