@@ -58,7 +58,7 @@ export const customTheme = createMuiTheme({
       dark: '#000',
       contrastText: '#000',
     },
-    divider: '#000',
+    divider: '#fff',
     tonalOffset: 0,//0.2,
     contrastThreshold: 0,//3,
     text: {
