@@ -1,5 +1,6 @@
 import * as alias from 'module-alias';
 //import * as path from 'path';
+import React from 'react';
 import ReactDOM from 'react-dom';
 //import * as uuid4 from 'uuid4';
 // app
